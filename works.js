@@ -19,7 +19,7 @@ window.WORKS = {
   // 3D product animation
   pa1: { type: "video", src: "video/7fa30edd5d6446a39c7f89de1c001730.mp4", ratio: 16/9, dur: 75.0 },
   pa2: { type: "video", src: "video/f1f17b117e4568a99eacdb3451539182.mp4", ratio: 16/9, dur: 41.0 },
-  pa3: { type: "video", src: "video/585d3ce5d0596485886073c036506d0f.mp4", ratio: 16/9, dur: 23.3 },
+  pa3: { type: "video", src: "video/elite-smile-film.mp4", poster: "media/w/elite-smile-film-poster.webp", ratio: 9 / 16, dur: 42, title: "Elite Smile", caption: "3D product film" },
   pa4: { type: "video", src: "video/dfd50b07159de7541451f6fc9f3c8b5b.mp4", ratio: 16/9, dur: 35.0 },
   // 3D visualization
   v1: { type: "image", src: "media/1e3bb55e6e7b46f37e0a7a83d4a42de3.png", ratio: 1 },
@@ -56,7 +56,7 @@ window.PORTFOLIO = [
     frames: [["p1", 478, 140, 378, 175], ["p2", 897, 140, 378, 175], ["p3", 277, 354, 420, 329], ["p4", 741, 354, 230, 329], ["p5", 1015, 354, 260, 329]] },
   { id: "3d-product-animation", title: "3D Product Animation", note: "3D Product Animations for clients in various industry, 2025",
     h: 760, bg: "grey", t: [76, 123, 531], n: [76, 267, 300],
-    frames: [["pa1", 485, 87, 383, 215], ["pa2", 908, 87, 383, 215], ["pa3", 163, 352, 518, 291], ["pa4", 730, 352, 561, 291]] },
+    frames: [["pa2", 908, 87, 383, 215], ["pa3", 163, 352, 518, 291], ["pa4", 730, 352, 561, 291]] },
   { id: "3d-animation", title: "3D Animation", note: "Original 3D animated short film, 2025", frames: [] },
   { id: "3d-visualization", title: "3D Visualization", note: "3D event visualization for clients in various industry, 2025",
     h: 760, bg: "white", t: [76, 109, 507], n: [76, 185, 286],
@@ -99,19 +99,19 @@ window.TOOL_ICONS = [
 ];
 
 /* New pieces shown first in a category on the v2 site (the Canva-layout pages ignore this). */
-window.NEW_WORKS = { "motion-graphics": ["lw1", "gm1", "sr1"], "3d-animation": ["vc1"] };
+window.NEW_WORKS = { "motion-graphics": ["lw1", "gm1", "sr1"], "3d-animation": ["vc1", "pa1"], "3d-product-design": ["es_stage"] };
 
 /* Pieces taken off the v2 site (still listed above so the Canva-layout pages keep their shape):
    m3 Remi release clip, m4 altcoin, m5 Schedify teaser, m7 Remi landscape film. */
-window.HIDDEN_WORKS = ["m3", "m4", "m5", "m7"];
+window.HIDDEN_WORKS = ["p3", "m3", "m4", "m5", "m7"];
 
 /* ---------- v2 site settings ---------- */
 /* Strongest work first: category order, then piece order inside each category. */
 window.V2_ORDER = [
   ["motion-graphics", ["lw1", "gm1", "sr1", "m2", "m6", "m1", "m8"]],
-  ["3d-animation", ["vc1"]],
+  ["3d-animation", ["vc1", "pa1"]],
   ["3d-product-animation", ["pa3", "pa1", "pa2", "pa4"]],
-  ["3d-product-design", ["p5", "p4", "p3", "p1", "p2"]],
+  ["3d-product-design", ["es_stage", "p5", "p4", "p3", "p1", "p2"]],
   ["3d-visualization", ["v3", "v1", "v4", "v5", "v2"]],
   ["graphics-design", ["g3", "g1", "g2", "g4"]],
   ["illustration", ["i2", "i4", "i3", "i1", "i5"]]
@@ -153,6 +153,12 @@ window.AI_TOOL_ICONS = ["media/tool-claude.svg", "media/tool-midjourney.svg", "m
    One per major category. Collapsed: cover, title, summary, tools.
    Expanded: overview, challenge, approach, hero media, detail shots with the reasoning, tools. */
 Object.assign(window.WORKS, {
+  // Elite Smile (Lumina): pa3 above is the new film. On the Work page: the film and es_stage only; the rest lives in the case study.
+  es_clay: { type: "video", src: "video/elite-smile-clay.mp4", poster: "media/w/elite-smile-clay-poster.webp", ratio: 9 / 16, dur: 42, title: "Elite Smile", caption: "Clay and render, side by side" },
+  es_stage: { type: "image", src: "media/elite-stage.png", ratio: 4 / 5, title: "Elite Smile", caption: "Stage, bottle and packaging" },
+  es_pump: { type: "image", src: "media/elite-pump.png", ratio: 4 / 5, title: "Elite Smile", caption: "Pump and serum" },
+  es_box: { type: "image", src: "media/elite-box.png", ratio: 4 / 5, title: "Elite Smile", caption: "Packaging, open" },
+  es_d1: { type: "image", src: "media/elite-design-launch.png", ratio: 4 / 5, title: "Elite Smile", caption: "Campaign design" },
   cs_lw_a: { type: "image", src: "media/cs-loopwise-tasks.jpg", ratio: 16 / 9, title: "Loopwise", caption: "Product UI, rebuilt for motion" },
   cs_lw_b: { type: "image", src: "media/cs-loopwise-endcard.jpg", ratio: 16 / 9, title: "Loopwise", caption: "End card" },
   cs_dl_a: { type: "image", src: "media/cs-dynalimb-callout.jpg", ratio: 16 / 9, title: "Dynalimb", caption: "Feature callouts" },
@@ -283,5 +289,22 @@ window.CASE_FILES = [
       { work: "cs_pa_a", title: "Proof, urgency and a next step", note: "\"Yayy, successfully purchased!\" notifications act as social proof, the round code badge creates urgency, and the URL bar gives one obvious action. \"Set am face front\" adds a Lagos voice that makes the brand feel local." }
     ],
     tools: ["Photoshop", "Illustrator", "Figma"]
+  },
+  {
+    id: "elite-smile", category: "3D Product", client: "Lumina", year: "2026",
+    title: "Elite Smile: a 3D product film and campaign",
+    summary: "A vertical product film, renders and campaign designs for a colour correcting serum, all built from one 3D scene.",
+    cover: "pa3", hero: "pa3",
+    facts: [["Deliverable", "3D film, renders & campaign"], ["Format", "9:16 · 42 seconds"], ["Role", "3D, animation, rendering & design"], ["Packaging", "Ryan Harricharan, Lumina Studio"]],
+    overview: ["A remake of the product animation I first made in 2024, with a new set of campaign images."],
+    challenge: ["The serum has to look deep and matte through soft frost, and strong lighting washes that out quickly."],
+    approach: ["I kept the original materials and lit around them, then cut the film to upbeat music so each scene hands over to the next."],
+    details: [
+      { work: "es_clay", title: "Clay and final, side by side", note: "The clay model and the finished render play in sync, showing how the film was built." },
+      { work: "es_pump", title: "Two pumps, as the label says", note: "The serum leaves the spout and lands on the bristles." },
+      { work: "es_box", title: "Packaging at true scale", note: "The bottle sits in its foam cut-out, with the lid lifted above it." },
+      { work: "es_d1", title: "A campaign from the same scene", note: "Solid and outline type around the renders, in the brand's own font and colours." }
+    ],
+    tools: ["Blender"]
   }
 ];
