@@ -291,14 +291,14 @@ window.CASE_FILES = [
     tools: ["Photoshop", "Illustrator", "Figma"]
   },
   {
-    id: "elite-smile", category: "3D Product", client: "Lumina", year: "2026",
+    id: "elite-smile", category: "3D Product", client: "Lumina", year: "2024",
     title: "Elite Smile: a 3D product film and campaign",
     summary: "A vertical product film, renders and campaign designs for a colour correcting serum, all built from one 3D scene.",
     cover: "pa3", hero: "pa3",
     facts: [["Deliverable", "3D film, renders & campaign"], ["Format", "9:16 · 42 seconds"], ["Role", "3D, animation, rendering & design"], ["Packaging", "Ryan Harricharan, Lumina Studio"]],
-    overview: ["A remake of the product animation I first made in 2024, with a new set of campaign images."],
-    challenge: ["The serum has to look deep and matte through soft frost, and strong lighting washes that out quickly."],
-    approach: ["I kept the original materials and lit around them, then cut the film to upbeat music so each scene hands over to the next."],
+    overview: ["I made this at Lumina Studio in 2024 for Elite Smile: a product film, renders and campaign designs for their colour correcting serum, so the brand could show the product before it went into production."],
+    challenge: ["The serum has to look deep and matte through soft frosted glass, and strong lighting washes that out quickly."],
+    approach: ["The client wanted frosted glass, and it suits the product. The frost softens the purple serum inside, keeps reflections quiet so the label stays easy to read, and gives the bottle a calm, clean look that fits an oral care brand.", "I lit around the frost so the serum stays deep and matte, then cut the film to upbeat music so each scene hands over to the next."],
     details: [
       { work: "es_clay", title: "Clay and final, side by side", note: "The clay model and the finished render play in sync, showing how the film was built." },
       { work: "es_pump", title: "Two pumps, as the label says", note: "The serum leaves the spout and lands on the bristles." },
