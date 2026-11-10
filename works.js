@@ -305,6 +305,6 @@ window.CASE_FILES = [
       { work: "es_box", title: "Packaging at true scale", note: "The bottle sits in its foam cut-out, with the lid lifted above it." },
       { work: "es_d1", title: "A campaign from the same scene", note: "Solid and outline type around the renders, in the brand's own font and colours." }
     ],
-    tools: ["Blender"]
+    tools: ["Blender", "After Effects"]
   }
 ];
